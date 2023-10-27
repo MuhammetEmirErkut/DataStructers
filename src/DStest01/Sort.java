@@ -22,8 +22,9 @@ public class Sort {
 	}
 	//Selection Sort Kısmı Burada 
 	
-	//En büyük olan Elemanı alıp arrayin son elemanı yapıyor ve bu şekildde bir sıralama gerçekleştiriyor
+	// En büyük olan Elemanı alıp arrayin son elemanı yapıyor ve bu şekildde bir sıralama gerçekleştiriyor
 	// n elemanlı bir array için bu işlem n-1 kez tekrarlanıyor
+	// Toplam 3*(n-1) yer değştirme var
 	public static void selectionSort(int[] theArray) {
 		for(int last = theArray.length-1; last >= 1; --last) {
 			int largest = indexOfLargest(theArray, last+1);
@@ -44,7 +45,12 @@ public class Sort {
 		
 		return indexSoFar;
 	}
-	//
+	//Insertion Sort Kısmı Burada 
+	
+	// Sırayla her iki indisi dolasıp küçük olanı solda bırakıyor
+	// n elemanlı bir array için bu işlem n-1 kez tekrarlanıyor
+	// En iyi durumda yer değiştirme sayısı 2*(n-1) / Karşılaştırma sayısı n-1 == O(n)
+	// En kotü durumda yer değiştirme sayısı 2*(n-1) + n*(n-1)/2 / Karşılaştırma sayısı n*(n-1)/2 == O(n^2)
 	
 	public static void insertionSort(int[] theArray) {
 		 	for (int unsorted = 1; unsorted < theArray.length; ++unsorted) {

@@ -70,10 +70,10 @@ public class Stack {
         Stack stack = new Stack(5);
 
         // Stack'e eleman ekleme
-        stack.push('[');
-        stack.push('(');
-        stack.push(')');
-        stack.push(']');
+        stack.push('5');
+        stack.push('6');
+        stack.push('4');
+        stack.push('3');
 
         // Stack'teki elemanları ekrana bastırma
         stack.displayStack();

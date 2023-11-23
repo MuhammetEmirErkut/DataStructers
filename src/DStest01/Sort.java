@@ -119,7 +119,7 @@ public class Sort {
 	// Yineleme alt dizilerin uzunluğu 1 olunca dibe vurmuş olur.
 	// Yineleme bağıntısı T(N) = 2T (N/2) + O(N),, toplam O(nlgn)
 	// m terim için || 
-	// En kotü durumda karşılaştırma sayısı n*log'2n-n+1 == O(n*loog'2n)
+	// En kotü durumda karşılaştırma sayısı n*log'2n-n+1 == O(n*log'2n)
 	// Ortalama durumda n*log'2n - 1.25*n - O(1) == O (n*log'2n)
 	// Merge sort, büyüklüğü orijinal dizinin büyüklüğüne eşit ola ekstra bir diziye ihtiyaç duyar
 	

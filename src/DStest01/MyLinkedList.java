@@ -1,8 +1,9 @@
 package DStest01;
 
+// Bağlı liste düğümünü temsil eden sınıf
 class ListNode {
-    int item;
-    ListNode next;
+    int item; // Düğümün içindeki veri
+    ListNode next; // Sonraki düğümü gösteren referans
     
     // Parametre almayan yapıcı metod
     public ListNode() {
@@ -14,10 +15,11 @@ class ListNode {
     }
 }
 
+// Bağlı listeyi temsil eden sınıf
 public class MyLinkedList {
-    ListNode head;
+    ListNode head; // Listenin başındaki düğüm
 
-    // find metodu
+    // Belirli bir indeksteki düğümü bulmayı amaçlayan metot
     private ListNode find(int index) {
         // Bu metotun implementasyonu size bağlı olacak
         // Belirli bir indeksteki düğümü bulma işlemi burada yapılacaktır.
@@ -34,7 +36,7 @@ public class MyLinkedList {
         return current;
     }
 
-    // insert metodu
+    // Belirli bir indekse iki yeni düğüm eklemeyi amaçlayan metot
     public void insert(int index, int newItem1, int newItem2) {
         ListNode newNode1 = new ListNode(newItem1);
         ListNode newNode2 = new ListNode(newItem2);
@@ -42,10 +44,12 @@ public class MyLinkedList {
         ListNode node = find(index);
 
         if (node == null) {
+            // Belirli bir indekste düğüm bulunamazsa, yeni düğümler head'in önüne eklenir
             newNode2.next = head;
             newNode1.next = newNode2;
             head = newNode1;
         } else {
+            // Belirli bir indekste düğüm bulunursa, yeni düğümler bu indeksin sonrasına eklenir
             newNode2.next = node.next;
             newNode1.next = newNode2;
             node.next = newNode1;
@@ -54,4 +58,3 @@ public class MyLinkedList {
 
     // Diğer metotlar ve işlemler buraya eklenebilir
 }
-
